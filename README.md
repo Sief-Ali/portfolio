@@ -1,5 +1,7 @@
 # Sief Ali — Developer Portfolio
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7444aa26-de9d-4178-8b49-1cb5630e27e6/deploy-status)](https://app.netlify.com/projects/sief-ali/deploys)
+
 A personal portfolio showcasing my work across embedded systems, robotics, backend engineering, and full-stack applications.
 
 **Live site:** [sief.is-a.dev](https://sief.is-a.dev) · **GitHub:** [Sief-Ali](https://github.com/Sief-Ali) · **LinkedIn:** [sief-ali](https://www.linkedin.com/in/sief-ali-480968254/)
