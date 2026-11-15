@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { Cpu, MapPin, Terminal, Linkedin } from "lucide-react";
+import { Cpu, MapPin, Terminal } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
+import { LinkedInIcon } from "@/components/LinkedInIcon";
 
 export function Footer() {
   return (
@@ -84,7 +85,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-emerald-400 transition-colors"
                 >
-                  <Linkedin className="w-3.5 h-3.5" />
+                  <LinkedInIcon className="w-3.5 h-3.5" />
                   <span>LinkedIn</span>
                 </a>
               </li>

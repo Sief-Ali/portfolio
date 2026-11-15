@@ -1,6 +1,7 @@
 import React from "react";
-import { MapPin, ExternalLink, Terminal, Mail, Linkedin } from "lucide-react";
+import { MapPin, ExternalLink, Terminal, Mail } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
+import { LinkedInIcon } from "@/components/LinkedInIcon";
 import { profile } from "@/content/profile";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Metadata } from "next";
@@ -68,7 +69,7 @@ export default function ContactPage() {
           >
             <div>
               <div className="w-10 h-10 rounded-lg bg-zinc-950 border border-zinc-800 flex items-center justify-center text-[#0A66C2] mb-4 group-hover:text-blue-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
+                <LinkedInIcon className="w-5 h-5" />
               </div>
               <h3 className="font-semibold text-zinc-100 text-sm">LinkedIn</h3>
               <p className="text-xs text-zinc-400 mt-1">
