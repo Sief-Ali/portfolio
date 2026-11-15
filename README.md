@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sief Ali — Personal Developer Portfolio
+
+Engineering portfolio built with **Next.js 15 (App Router)**, **TypeScript**, and **Tailwind CSS**. Designed specifically around the intersection of **embedded systems, backend architecture, and full-stack software products**.
+
+---
+
+## Architecture Overview
+
+```
+src/
+├── app/
+│   ├── page.tsx               # Homepage: Hero, specializations, pinned repos, honors & certs
+│   ├── projects/
+│   │   ├── page.tsx           # Categorized portfolio with interactive filters
+│   │   ├── madarek/
+│   │   │   └── page.tsx       # Dedicated Madarek product case study with RTL Arabic support
+│   │   └── [slug]/
+│   │       └── page.tsx       # In-depth architectural case studies (SPST, MetroExpress, etc.)
+│   ├── about/
+│   │   └── page.tsx           # Background, engineering philosophy, and cross-disciplinary skills
+│   ├── experience/
+│   │   └── page.tsx           # DECI Level 4 & 5 milestones, Ministerial Recognition, TOFAS certs
+│   ├── contact/
+│   │   └── page.tsx           # Verified GitHub and npm channels
+│   ├── sitemap.ts             # Dynamic search engine sitemap
+│   └── robots.ts              # Robots configuration
+├── components/
+│   ├── Header.tsx             # Responsive sticky navigation with mobile drawer
+│   ├── Footer.tsx             # Semantic engineering footer
+│   ├── ProjectCard.tsx        # Differentiates embedded firmware (MCAL/HAL) vs web/backend
+│   ├── ProjectList.tsx        # Client-side category filtering
+│   ├── CertificateCard.tsx    # Verified credential card with modal inspection & official verify link
+│   └── MadarekGallery.tsx     # Fullscreen screenshot gallery with RTL captions
+├── content/                   # Centralized data files for easily maintaining info
+│   ├── profile.ts             # Bio, headline, focus areas
+│   ├── projects.ts            # Detailed project technical highlights & decisions
+│   └── experience.ts          # DECI achievements and verified TOFAS certificates
+└── lib/
+    └── github.ts              # Server-side Octokit & GraphQL pinned repository fetcher with fallbacks
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Environment Variables (Optional)
+```bash
+cp .env.example .env.local
+```
+Add your `GITHUB_TOKEN` to `.env.local` to query GitHub's GraphQL API for live pinned repositories. If omitted, the server automatically uses public REST calls and verified fallback data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run Development Server
+```bash
+pnpm dev
+```
+Open [http://localhost:3000](http://localhost:3000).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Build for Production
+```bash
+pnpm build
+pnpm start
+```
