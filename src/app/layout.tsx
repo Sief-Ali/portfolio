@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
+
 export const metadata: Metadata = {
   title: {
     default: "Sief Ali — Embedded Systems & Full-Stack Developer",
